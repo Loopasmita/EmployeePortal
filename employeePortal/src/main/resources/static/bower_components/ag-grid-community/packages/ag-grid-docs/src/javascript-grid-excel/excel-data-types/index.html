@@ -1,0 +1,40 @@
+<style>
+    .greenBackground{
+        background-color: #008000;
+        color: #e0ffc1;
+    }
+
+    .blueBackground{
+        background-color: #00008B;
+        color: white;
+    }
+    .topContainer {
+        display: flex;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 14px;
+        align-items: center;
+    }
+    .topContainer label {
+        margin-right: 15px;
+    }
+    .topContainer button {
+        height: 25px;
+        cursor: pointer;
+    }
+
+</style>
+
+<div class="topContainer">
+    <label>
+        File Name:
+        <input id="fileName" placeholder="export" type="text"/>
+    </label>
+    <label>
+        Sheet Name:
+        <input id="sheetName" maxlength="31" placeholder="ag-grid" type="text"/>
+    </label>
+    <label>
+        <button onclick="onBtExport()">Export to Excel</button>
+    </label>
+</div>
+<div class="ag-theme-balham" id="myGrid" style="margin-top: 5px; height: 380px;"></div>

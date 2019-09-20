@@ -1,0 +1,121 @@
+<style>
+    .greenBackground{
+        background-color: lightgreen;
+    }
+
+    .redFont{
+        color: red;
+    }
+
+    .darkGreyBackground{
+        background-color: #888888;
+    }
+
+    .boldBorders{
+        border: 3px solid black !important;
+    }
+
+    .notInExcel{
+        color: #1b6d85;
+    }
+
+</style>
+
+<div style="padding-bottom: 4px;">
+    <label>
+        File Name:
+        <input id="fileName" type="text"/>
+    </label>
+    <label>
+        Sheet Name:
+        <input id="sheetName" type="text"/>
+    </label>
+    <label style="margin-left: 20px;">
+        <button onclick="onBtExport()">Export to Excel (xlsx)</button>
+    </label>
+</div>
+
+<div style="padding-bottom: 4px;">
+    <span style="display: inline-block;">
+        <label style="margin-right: 20px;">
+            <input id="skipHeader" type="checkbox"/>
+            Skip Header
+        </label>
+        <br/>
+        <label style="margin-right: 20px;">
+            <input id="columnGroups" type="checkbox"/>
+            Column Groups
+        </label>
+        <br/>
+        <label style="margin-right: 20px;">
+            <input id="skipFooters" type="checkbox"/>
+            Skip Footers
+        </label>
+    </span>
+    <span style="display: inline-block;">
+    </span>
+    <span style="display: inline-block;">
+        <label style="margin-right: 20px;">
+            <input id="onlySelected" type="checkbox"/>
+            Only Selected
+        </label>
+        <br/>
+        <label style="margin-right: 20px;">
+            <input id="useCellCallback" type="checkbox"/>
+            Use Cell Callback
+        </label>
+        <br/>
+        <label style="margin-right: 20px;">
+            <input id="processHeaders" type="checkbox"/>
+            Format Headers
+        </label>
+        <br/>
+    </span>
+    <span style="display: inline-block;">
+        <label style="margin-right: 20px;">
+            <input id="skipPinnedTop" type="checkbox"/>
+            Skip Pinned Top
+        </label>
+        <br/>
+        <label style="margin-right: 20px;">
+            <input id="skipPinnedBottom" type="checkbox"/>
+            Skip Pinned Bottom
+        </label>
+        <br/>
+        <label style="margin-right: 20px;">
+            <input id="skipGroups" type="checkbox"/>
+            Skip Groups
+        </label>
+    </span>
+    <span style="display: inline-block;">
+        <label style="margin-right: 20px;">
+            <input id="useSpecificColumns" type="checkbox"/>
+            Specify Columns
+        </label>
+        <br/>
+        <label style="margin-right: 20px;">
+            <input id="allColumns" type="checkbox"/>
+            All Columns
+        </label>
+        <br/>
+        <label style="margin-right: 20px;">
+            <input id="skipGroupR" type="checkbox"/>
+            Skip Group R
+        </label>
+        <br/>
+    </span>
+    <span style="display: inline-block;">
+        <label style="margin-right: 20px;">
+            <input id="appendHeader" type="checkbox"/>
+            Append Header
+        </label>
+        <br/>
+        <label style="margin-right: 20px;">
+            <input id="appendFooter" type="checkbox"/>
+            Append Footer
+        </label>
+        <br/><br/>
+    </span>
+</div>
+
+<div class="ag-theme-balham" id="myGrid" style="height: 380px;"></div>

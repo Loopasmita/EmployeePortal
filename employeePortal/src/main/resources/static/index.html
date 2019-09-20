@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html class="no-js" ng-app="app" style="overflow:scroll">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <base href="/">
+    <title data-ng-bind="EmployeePortal"></title>
+    <link href="/bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/bower_components/angular-ui-grid/ui-grid.css" rel="stylesheet"/>
+    <link href="/styles/main.css" rel="stylesheet">
+</head>
+<body>
+<script src="bower_components/angular/angular.min.js"></script>
+<script src="bower_components/json3/lib/json3.min.js"></script>
+<script src="bower_components/jquery/dist/jquery.js"></script>
+<script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script>
+<script src="bower_components/angular-route/angular-route.min.js"></script>
+<script src="bower_components/ag-grid-community/dist/ag-grid-community.js"></script>
+
+<!--Services-->
+<script src="components/app.module.js"></script>
+<script src="components/commonServices/commonService.module.js"></script>
+<script src="components/commonServices/webApiService.js"></script>
+<script src="components/commonServices/interceptorService.js"></script>
+<script src="components/layOut/topNavCtrl.js"></script>
+<div ng-include="'components/layOut/topNav.html'"></div>
+<div class="container">
+    <div ng-view></div>
+</div>
+<!-- App - Main Screen -->
+<script src="components/mainScreen/mainScreen.module.js"></script>
+<script src="components/mainScreen/config.route.js"></script>
+<script src="components/mainScreen/mainScreen.js"></script>
+
+</body>
+</html>

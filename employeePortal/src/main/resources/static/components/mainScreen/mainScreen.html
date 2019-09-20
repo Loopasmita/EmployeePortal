@@ -1,0 +1,90 @@
+<div class="container" style="width: 100%">
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class='col-sm-12'>
+                <div class="accordion" id="accordionExample">
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h2 class="mb-0">
+                                <button aria-controls="collapseOne" aria-expanded="true" class="btn btn-link"
+                                        data-target="#collapseOne" data-toggle="collapse" type="button">
+                                    Register an Employee
+                                </button>
+                            </h2>
+                        </div>
+
+                        <div aria-labelledby="headingOne" class="collapse show" data-parent="#accordionExample"
+                             id="collapseOne">
+                            <div class="card-body">
+                                <form name="form" ng-submit="vm.register()" role="form">
+                                    <div class="form-group">
+                                        <label for="fName">Fist Name</label>
+                                        <input class="form-control" id="fName" name="First Name" ng-model="vm.fName"
+                                               required
+                                               type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="lName">Last Name</label>
+                                        <input class="form-control" id="lName" name="lName" ng-model="vm.lName"
+                                               required
+                                               type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="gender">Gender</label>
+                                        <input class="form-control" id="gender" ng-model="vm.gender" type="radio"
+                                               value="female">female
+                                        <input class="form-control" id="gender" ng-model="vm.gender" type="radio"
+                                               value="male">male
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dob">Date Of Birth</label>
+                                        <input class="form-control" id="dob" name="dd-mm-yyyy" ng-model="vm.dob"
+                                               required
+                                               type="text"/>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="dept">Department</label>
+                                        <input class="form-control" id="dept" name="dept" ng-model="vm.dept"
+                                               required
+                                               type="text"/>
+                                    </div>
+                                    <div class="form-actions">
+                                        <button class="btn btn-primary" ng-disabled="form.$invalid || dataLoading"
+                                                type="submit">
+                                            Register
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h2 class="mb-0">
+                                <button aria-controls="collapseTwo" aria-expanded="false" class="btn btn-link collapsed"
+                                        data-target="#collapseTwo" data-toggle="collapse"
+                                        on-click="vm.getAllEmployees()"
+                                        type="button">
+                                    View Employee List
+                                </button>
+                            </h2>
+                        </div>
+                        <div aria-labelledby="headingTwo" class="collapse" data-parent="#accordionExample"
+                             id="collapseTwo">
+                            <div class="card-body" ng-if="vm.dataLength!=0">
+                                <div class="ag-screen-adjustment">
+                                    <div ag-grid="vm.gridOptions" class="ag-theme-fresh"
+                                         style="width:100%;height:100%;"></div>
+                                </div>
+                            </div>
+                            <div class="card-body" ng-if="vm.dataLength==0">
+                                No Employee Record Available
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

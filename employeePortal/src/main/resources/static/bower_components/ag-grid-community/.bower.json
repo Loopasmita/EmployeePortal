@@ -1,0 +1,43 @@
+{
+  "name": "ag-grid-community",
+  "version": "20.0.0",
+  "homepage": "http://www.ag-grid.com/",
+  "authors": [
+    "Niall Crosby <niall.crosby@ag-grid.com>"
+  ],
+  "description": "Advanced Javascript Datagrid. Supports raw Javascript, React, AngularJS 1.x, AngularJS 2.0 and Web Components",
+  "main": [
+    "./main.js"
+  ],
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "web-components",
+    "grid",
+    "data",
+    "table",
+    "react",
+    "reactjs",
+    "angular",
+    "angularjs"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {},
+  "dependencies": {},
+  "_release": "20.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "20.0.0",
+    "commit": "3d14f9cc21fd8e9cda791ba0949568925160d64b"
+  },
+  "_source": "https://github.com/ag-grid/ag-grid.git",
+  "_target": "~20.0.0",
+  "_originalSource": "ag-grid-community"
+}

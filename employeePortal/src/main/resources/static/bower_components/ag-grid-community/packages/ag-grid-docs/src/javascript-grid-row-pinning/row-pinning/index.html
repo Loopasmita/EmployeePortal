@@ -1,0 +1,27 @@
+<div class="test-container">
+    <div class="test-header">
+        <span>
+            Rows to Pin on Top:
+        </span>
+        <select id="top-row-count" onchange="onPinnedRowTopCount()" style="margin-left: 10px; margin-right: 20px;">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+        <span>
+            Rows to Pin on Bottom:
+        </span>
+        <select id="bottom-row-count" onchange="onPinnedRowBottomCount()" style="margin-left: 10px;">
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+        </select>
+    </div>
+    <div style="min-height: 400px; height: calc(100% - 30px);">
+        <div class="ag-theme-balham" id="myGrid" style="height: 100%"></div>
+    </div>
+</div>

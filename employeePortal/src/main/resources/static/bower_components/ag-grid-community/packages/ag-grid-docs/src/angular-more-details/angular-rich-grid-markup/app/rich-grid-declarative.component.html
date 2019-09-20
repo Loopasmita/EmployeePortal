@@ -1,0 +1,91 @@
+<div style="width: 760px;">
+    <div style="display: inline-block;width: 100%">
+        <div style="float: left">
+            <b>Employees Skills and Contact Details</b>
+            {{rowCount}}
+        </div>
+    </div>
+    <div style="margin-top: 10px">
+        <div>
+            <span>
+                Grid API:
+                <button (click)="allSelected=true;gridOptions.api.selectAll()" [disabled]="allSelected"
+                        class="btn btn-primary">Select All</button>
+                <button (click)="allSelected=false;gridOptions.api.deselectAll()" [disabled]="!allSelected"
+                        class="btn btn-primary">Clear Selection</button>
+            </span>
+            <span style="float: right;">
+                Column API:
+                <button (click)="countryHidden=true; gridOptions.columnApi.setColumnVisible('country', false)"
+                        [disabled]="countryHidden"
+                        class="btn btn-primary">Hide Country Column</button>
+                <button (click)="countryHidden=false;gridOptions.columnApi.setColumnVisible('country', true)"
+                        [disabled]="!countryHidden"
+                        class="btn btn-primary">Show Country Column</button>
+            </span>
+        </div>
+        <div style="display: inline-block;width: 100%;margin-top: 10px;margin-bottom: 10px">
+            <div style="float: left">
+                <label>
+                    <input (change)="showToolPanel=$event.target.checked" type="checkbox"/>
+                    Show Tool Panel
+                </label>
+            </div>
+            <div style="float: left; margin-left: 20px">
+                <button (click)="createRowData()" class="btn btn-primary">Refresh Data</button>
+            </div>
+            <div style="float: left; margin-left: 20px">
+                <input (keyup)="onQuickFilterChanged($event)" class="form-control" id="quickFilterInput"
+                       placeholder="Type text to filter..." style="width: 175px"/>
+            </div>
+            <div style="float: right">
+                Filter API:
+                <button (click)="dobFilter()" class="btn btn-primary">DOB equals to 01/01/2000</button>
+            </div>
+        </div>
+
+        <ag-grid-angular (gridReady)="onReady($event)" (modelUpdated)="onModelUpdated()"
+                         [gridOptions]="gridOptions"
+                         [rowData]="rowData"
+                         [showToolPanel]="showToolPanel"
+
+                         class="ag-theme-balham"
+                         groupHeaders
+
+                         rowSelection="multiple"
+                         style="width: 100%; height: 400px;"
+                         suppressRowClickSelection
+                         toolPanelSuppressGroups
+                         toolPanelSuppressValues>
+            <ag-grid-column [headerGroupComponentFramework]="components.headerGroupComponent" headerName="Employee">
+                <ag-grid-column [checkboxSelection]="true" [filter]="true" [pinned]="true"
+                                [resizable]="true" [suppressMenu]="true" [width]="30" headerName="#"></ag-grid-column>
+                <ag-grid-column [filter]="true" [pinned]="true" [resizable]="true" [sortable]="true" [width]="150"
+                                field="name" headerName="Name"></ag-grid-column>
+                <ag-grid-column [cellRenderer]="countryCellRenderer" [filterParams]="getCountryFilterParams()"
+                                [filter]="true" [pinned]="true"
+                                [resizable]="true" [sortable]="true" [width]="150" field="country"
+                                headerName="Country"></ag-grid-column>
+                <ag-grid-column [cellRenderer]="parseDate" [columnGroupShow]="'open'" [filter]="'agDateColumnFilter'"
+                                [pinned]="true" [resizable]="true"
+                                [sortable]="true" [width]="130" field="dob" headerName="Date of Birth"></ag-grid-column>
+            </ag-grid-column>
+            <ag-grid-column headerName="IT Skills">
+                <ag-grid-column [cellRenderer]="skillsCellRenderer" [filter]="getSkillFilter()"
+                                [resizable]="true" [width]="125" headerName="Skills"></ag-grid-column>
+                <ag-grid-column [cellRenderer]="percentCellRenderer" [filter]="getProficiencyFilter()"
+                                [resizable]="true"
+                                [sortable]="true" [width]="120" field="proficiency"
+                                headerName="Proficiency"></ag-grid-column>
+            </ag-grid-column>
+            <ag-grid-column headerName="Contact">
+                <ag-grid-column [resizable]="true" [sortable]="true" [width]="150" field="mobile"
+                                filter="agTextColumnFilter" headerName="Mobile"></ag-grid-column>
+                <ag-grid-column [resizable]="true" [sortable]="true" [width]="150" field="landline"
+                                filter="agTextColumnFilter" headerName="Land-line"></ag-grid-column>
+                <ag-grid-column [resizable]="true" [sortable]="true" [width]="500" field="address"
+                                filter="agTextColumnFilter" headerName="Address"></ag-grid-column>
+            </ag-grid-column>
+        </ag-grid-angular>
+    </div>
+</div>

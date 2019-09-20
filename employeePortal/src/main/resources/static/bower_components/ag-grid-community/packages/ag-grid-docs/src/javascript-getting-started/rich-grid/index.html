@@ -1,0 +1,22 @@
+<style>
+    button:disabled { color: #a0a0a0; }
+
+</style>
+
+<div style="width: 100%;">
+    <div style="padding: 4px">
+        <div style="float: right;">
+            <input id="quickFilterInput" placeholder="Type text to filter..." type="text"/>
+            <button id="btDestroyGrid">Destroy Grid</button>
+            <button id="btBringGridBack">Create Grid</button>
+        </div>
+        <div style="padding: 4px;">
+            <b>Employees Skills and Contact Details</b> <span id="rowCount"></span>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div class="ag-theme-balham ag-basic"
+         id="bestHtml5Grid"
+         style="width: 100%; height: 400px;">
+    </div>
+</div>

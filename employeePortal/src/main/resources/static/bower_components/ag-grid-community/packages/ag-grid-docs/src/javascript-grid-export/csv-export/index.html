@@ -1,0 +1,105 @@
+<div style="height: 100%; padding-top: 112px; box-sizing: border-box;">
+    <div class="ag-theme-balham" id="myGrid" style="height: 100%;"></div>
+</div>
+
+<div style="position: absolute; top: 0px; left: 0px; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 13px;">
+
+    <div style="padding-bottom: 4px;">
+        <label>
+            File Name:
+            <input id="fileName" type="text"/>
+        </label>
+        <label style="margin-left: 20px;">
+            Separator
+            <input id="columnSeparator" style="width: 20px;" type="text"/>
+        </label>
+        <label style="margin-left: 20px;">
+            <button onclick="onBtExport()">Export to CSV</button>
+        </label>
+    </div>
+
+    <table>
+        <tr>
+            <td valign="top">
+                <label style="margin-right: 20px;">
+                    <input id="columnGroups" type="checkbox"/>
+                    Column groups
+                </label>
+                <br/>
+                <label style="margin-right: 20px;">
+                    <input id="useSpecificColumns" type="checkbox"/>
+                    Specify Columns
+                </label>
+                <br/>
+                <label style="margin-right: 20px;">
+                    <input id="allColumns" type="checkbox"/>
+                    All Columns
+                </label>
+                <br/>
+                <label style="margin-right: 20px;">
+                    <input id="onlySelected" type="checkbox"/>
+                    Only Selected
+                </label>
+            </td>
+            <td valign="top">
+                <label style="margin-right: 20px;">
+                    <input id="customHeader" type="checkbox"/>
+                    Custom Header
+                </label>
+                <br/>
+                <label style="margin-right: 20px;">
+                    <input id="customFooter" type="checkbox"/>
+                    Custom Footer
+                </label>
+                <br/>
+                <label style="margin-right: 20px;">
+                    <input id="skipHeader" type="checkbox"/>
+                    Skip Header
+                </label>
+                <br/>
+                <label style="margin-right: 20px;">
+                    <input id="skipFooters" type="checkbox"/>
+                    Skip Footers
+                </label>
+            </td>
+            <td valign="top">
+                <label style="margin-right: 20px;">
+                    <input id="useCellCallback" type="checkbox"/>
+                    Use Cell Callback
+                </label>
+                <br/>
+                <label style="margin-right: 20px;">
+                    <input id="suppressQuotes" type="checkbox"/>
+                    Suppress Quotes
+                </label>
+                <br/>
+                <label style="margin-right: 20px;">
+                    <input id="skipGroups" type="checkbox"/>
+                    Skip Groups
+                </label>
+                <br/>
+                <label style="margin-right: 20px;">
+                    <input id="skipGroupR" type="checkbox"/>
+                    Skip Group R
+                </label>
+            </td>
+            <td valign="top">
+                <label style="margin-right: 20px;">
+                    <input id="processHeaders" type="checkbox"/>
+                    Format Headers
+                </label>
+                <br/>
+                <label style="margin-right: 20px;">
+                    <input id="skipPinnedTop" type="checkbox"/>
+                    Skip Pinned Top
+                </label>
+                <br/>
+                <label style="margin-right: 20px;">
+                    <input id="skipPinnedBottom" type="checkbox"/>
+                    Skip Pinned Bottom
+                </label>
+            </td>
+        </tr>
+    </table>
+
+</div>

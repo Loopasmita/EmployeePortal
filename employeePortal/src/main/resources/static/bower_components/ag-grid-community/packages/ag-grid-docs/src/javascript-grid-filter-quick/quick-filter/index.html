@@ -1,0 +1,17 @@
+<div class="test-container">
+    <div class="test-header">
+        <input id="filter-text-box" oninput="onFilterTextBoxChanged()" placeholder="Filter..." type="text"/>
+        <button onclick="onPrintQuickFilterTexts()" style="margin-left: 20px;">Print Quick Filter Texts</button>
+        <span style="margin-left: 50px">
+            <label>
+                <input checked id="cbNormal" name="cache" onchange="onQuickFilterTypeChanged()" type="radio"/>
+                Normal Quick Filter
+            </label>
+            <label>
+                <input id="cbCache" name="cache" onchange="onQuickFilterTypeChanged()" type="radio"/>
+                Cache Quick Filter
+            </label>
+        </span>
+    </div>
+    <div class="ag-theme-balham" id="myGrid" style="height: calc(100% - 30px);"></div>
+</div>

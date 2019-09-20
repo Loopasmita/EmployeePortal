@@ -1,0 +1,16 @@
+<div class="test-container">
+    <div class="test-header">
+        <label style="margin: 6px;">
+            <input checked name="gridType" onchange="changeSelection('normal')" type="radio"/> Normal
+        </label>
+
+        <label style="margin: 6px;">
+            <input name="gridType" onchange="changeSelection('single')" type="radio"/> Remove Single Children
+        </label>
+
+        <label style="margin: 6px;">
+            <input name="gridType" onchange="changeSelection('lowest')" type="radio"/> Remove Lowest Single Children
+        </label>
+    </div>
+    <div class="ag-theme-balham" id="myGrid" style="height: 100%;"></div>
+</div>

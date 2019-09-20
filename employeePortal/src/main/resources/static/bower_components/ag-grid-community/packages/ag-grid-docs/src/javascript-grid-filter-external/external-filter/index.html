@@ -1,0 +1,23 @@
+<div class="test-container">
+    <div class="test-header">
+        <label>
+            <input checked name="filter" onchange="externalFilterChanged('everyone')" type="radio" value="everyone"/>
+            Everyone
+        </label>
+        <label style="padding-left: 30px;">
+            <input name="filter" onchange="externalFilterChanged('below30')" type="radio" value="below30"/> Below 30
+        </label>
+        <label style="padding-left: 30px;">
+            <input name="filter" onchange="externalFilterChanged('between30and50')" type="radio"
+                   value="between30and50"/> Between 30 and 50
+        </label>
+        <label style="padding-left: 30px;">
+            <input name="filter" onchange="externalFilterChanged('above50')" type="radio" value="above50"/> Above 50
+        </label>
+        <label style="padding-left: 30px;">
+            <input name="filter" onchange="externalFilterChanged('dateAfter2008')" type="radio" value="dateAfter2008"/>
+            After 01/01/2008
+        </label>
+    </div>
+    <div class="ag-theme-balham" id="myGrid" style="height: 450px; margin-top: 4px;"/>
+</div>

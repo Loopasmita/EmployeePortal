@@ -1,0 +1,16 @@
+<div class="test-container">
+    <div class="test-header">
+        <div style="padding: 4px;">
+            <button onclick="clearPinned()">Clear Pinned</button>
+            <button onclick="resetPinned()">Left = #, Athlete, Age; Right = Total</button>
+            <button onclick="pinCountry()">Left = Country</button>
+        </div>
+
+        <div style="padding: 4px;">
+            Jump to:
+            <input id="row" oninput="jumpToRow()" placeholder="row" style="width: 40px" type="text"/>
+            <input id="col" oninput="jumpToCol()" placeholder="col" style="width: 40px" type="text"/>
+        </div>
+    </div>
+    <div class="ag-theme-balham" id="myGrid" style="height: calc(100% - 60px);"></div>
+</div>

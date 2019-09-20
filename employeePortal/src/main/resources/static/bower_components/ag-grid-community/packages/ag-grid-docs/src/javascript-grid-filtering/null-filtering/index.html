@@ -1,0 +1,35 @@
+<div class="test-container">
+    <div class="test-header">
+        <div style="margin-right: 30px; float: left;">Include NULL in age/date:</div>
+        <div style="margin-left: 30px; float: left;">
+            <div style="float: left;">equals</div>
+            <div style="float: left;">
+                <input checked="checked" name="equals" onclick="changeNull('equals', false)" type="radio" value="false">
+                False<br>
+                <input name="equals" onclick="changeNull('equals', true)" type="radio" value="true"> True<br>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+
+        <div style="margin-left: 30px; float: left;">
+            <div style="float: left;">lessThan</div>
+            <div style="float: left;">
+                <input checked="checked" name="lessThan" onclick="changeNull('lessThan', false)" type="radio"
+                       value="false"> False<br>
+                <input name="lessThan" onclick="changeNull('lessThan', true)" type="radio" value="true"> True<br>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+
+        <div style="margin-left: 30px; float: left;">
+            <div style="float: left;">greaterThan</div>
+            <div style="float: left;">
+                <input checked="checked" name="greaterThan" onclick="changeNull('greaterThan', false)" type="radio"
+                       value="false"> False<br>
+                <input name="greaterThan" onclick="changeNull('greaterThan', true)" type="radio" value="true"> True<br>
+            </div>
+            <div style="clear: both"></div>
+        </div>
+    </div>
+    <div class="ag-theme-balham-dark" id="myGrid" style="height: 88%;"></div>
+</div>
